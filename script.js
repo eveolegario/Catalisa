@@ -22,6 +22,12 @@ pegarPersonagem = () => {
     let numeroAleatorio1 = gerarValorAletorio();
     let numeroAleatorio2 = gerarValorAletorio();
     let numeroAleatorio3 = gerarValorAletorio();
+    obterInformacaoPersonagem(numeroAleatorio1);
+    obterInformacaoPersonagem(numeroAleatorio2);
+    obterInformacaoPersonagem(numeroAleatorio3);
+}    
+
+obterInformacaoPersonagem = (numeroAleatorio) => {
     return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
         method:'GET',
         headers: {
