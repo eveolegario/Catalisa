@@ -19,7 +19,9 @@ gerarValorAletorio = () => {
 }
 
 pegarPersonagem = () => {
-    let numeroAleatorio = gerarValorAletorio();
+    let numeroAleatorio1 = gerarValorAletorio();
+    let numeroAleatorio2 = gerarValorAletorio();
+    let numeroAleatorio3 = gerarValorAletorio();
     return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
         method:'GET',
         headers: {
@@ -33,6 +35,8 @@ pegarPersonagem = () => {
         especie.innerHTML = data.species;
         condicao.innerHTML = traduzirCondicao(data);
     });
+    
 }
 
 botao.onclick = pegarPersonagem;
+
